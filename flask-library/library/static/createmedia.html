@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Create New Media</title>
+</head>
+<body>
+    <h1>Create Media</h1>
+    <form id="newMedia">
+        <label>Type of Media:</label>
+        <select id="selectMedia" name="mediaSelect">
+            <option value="Book">Book</option>
+            <option value="Movie">Movie</option>
+            <option value="VideoGame">Video Game</option>
+        </select>
+        <label>Title:</label>
+        <input type="text" id="title" name="title"/>
+        <label>Genre:</label>
+        <input type="text" id="genre" name="genre" />
+        <div id="typeSpecific">
+            </div>
+    </form>
+    <button id="submitForm">Submit</button>
+    <script src="/static/js/createMedia.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <h1>{{ mediatype }}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                {% if mediatype == 'books' %}
+                <th>Author</th>
+                <th>isbn</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for media in media_list %}
+            <tr>
+                <td>{{ media.title }}</td>
+                <td>{{ media.genre }}</td>
+                {% if mediatype == 'books' %}
+                <td>{{ media.author }}</td>
+                <td>{{ media.isbn }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# run with: pip install -r requirements.txt
+flask
+flask_cors
+pymongo
+dnspython
+pyjwt

@@ -1,0 +1,11 @@
+mongo:
+  image: mongo
+
+webapp:
+  build: .
+  ports:
+    - "5000:5000"
+  environment:
+    - FLASK_APP=myapp.py
+    - MONGO_URI=mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
+
