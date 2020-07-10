@@ -1,0 +1,36 @@
+@import 'variables';
+
+td {
+    background-color: $rev-background;
+}
+
+
+%media-family {
+    thead {
+        font-family: 'arial ms';
+    }
+    tbody {
+        font-family: 'comic sans ms';
+    }
+}
+
+.vg {
+    @extend %media-family;
+    thead {
+        background-color: #ff0000;
+    }
+}
+
+.movie {
+    @extend %media-family;
+    thead {
+        background-color: #00ff00;
+    }
+}
+
+.book {
+    @extend %media-family;
+    thead {
+        background-color: #0000ff;
+    }
+}
